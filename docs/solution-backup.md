@@ -49,16 +49,19 @@ Manual backup for application is based on the **Exporting source code and databa
 ```
 The general manual backup operation steps are as follows:
 
-1. Compress and download the entire */data/wwwroot/opencart* directory by SFTP 
-2. Export ownCloud's database by [phpMyAdmin](/admin-mysql.md)
+1. Compress and download the entire */data/wwwroot/owncloud* directory by SFTP 
+2. Compress and download the entire */data/wwwroot/owncloud/data* directory by SFTP 
+3. Export ownCloud's database by [phpMyAdmin](/admin-mysql.md)
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
-3. Put the source code file, data file and database file in the same folder, named according to the date
-4. Backup completed
+4. Put the source code file, data file and database file in the same folder, named according to the date
+5. Backup completed
 
 ### ownCloud online backup
 
-This section provides ownCloud online database backup solution
+This section provides ownCloud online backup solution
 
-1. Log in ownCloud console as administrator
-2. Open:【Advanced Parameters】>【DB backup】,create a new backup and download it
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-backupdb-websoft9.png)
+1. Log in ownCloud console as administrator, install **[OwnBackup](http://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 
+2. Go to【Admin】>【OwnBackup】, start backup
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ownbackup-websoft9.png)
+3. You can restore it also
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-restore-websoft9.png)

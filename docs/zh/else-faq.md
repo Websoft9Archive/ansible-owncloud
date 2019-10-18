@@ -2,7 +2,19 @@
 
 #### ownCloud 支持多语言吗？
 
-支持多语言（包含中文），通过[后台设置](/zh/solution-more.html#opencart-语言包)即可
+支持多语言（包含中文）
+
+#### ownCloud 是否提供客户端？
+
+有。包括：ownCloud Desktop Client, ownCloud Android App, ownCloud iOS App
+
+#### ownCloud 自身能够预览和编辑 Office 文档吗？
+
+不可以，需要连接第三方的文档编辑和服务才可以，[设置参考](/zh/solution-more.html#owncloud-文件预览与编辑)
+
+#### ownCloud 支持集成外部存储吗？
+
+支持多种主流外部存储服务
 
 #### ownCloud(LAMP)，ownCloud(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
 
@@ -10,7 +22,7 @@ LAMP和LNMP代表支持 ownCloud 运行所对应的基础环境，具体参考[�
 
 #### 是否可以使用云平台的 RDS 作为 ownCloud 的数据库？
 
-可以，修改 [ownCloud 配置文件](/zh/stack-components.html#opencart) 即可
+可以，修改 [ownCloud 配置文件](/zh/stack-components.html#owncloud) 即可
 
 #### ownCloud能在Windows服务器上运行吗？
 
@@ -18,11 +30,7 @@ LAMP和LNMP代表支持 ownCloud 运行所对应的基础环境，具体参考[�
 
 #### ownCloud数据库连接配置信息在哪里？
 
-数据库配置信息 [ownCloud 配置文件](/zh/stack-components.html#opencart)中
-
-#### 安装 ownCloud Extension 需要[设置 FTP 账号](http://docs.opencart.com/en-gb/extension/installer/)吗？
-
-自 ownCloud3.0 开始已经不需要了
+数据库配置信息 [ownCloud 配置文件](/zh/stack-components.html#owncloud)中
 
 #### 如果没有域名是否可以部署 ownCloud？
 
@@ -42,7 +50,7 @@ LAMP和LNMP代表支持 ownCloud 运行所对应的基础环境，具体参考[�
 
 #### 是否可以修改 ownCloud 的源码路径？
 
-可以，通过修改 [虚拟主机配置文件](/zh/stack-components.md#opencart)中相关参数
+可以，通过修改 [虚拟主机配置文件](/zh/stack-components.md#owncloud)中相关参数
 
 #### 如何修改上传的文件权限?
 

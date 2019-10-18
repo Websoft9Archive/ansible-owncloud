@@ -2,8 +2,8 @@ module.exports = {
 
 //针对不同项目，需要修改的参数有：base,title,description,repo以及nav,sidebar 文件夹下的导航js文件
 
-base: '/docs/opencart/',
-dest: 'html/opencart',
+base: '/docs/owncloud/',
+dest: 'html/owncloud',
 
 head: [
   ['link', { rel: 'icon', href: '/favcon.ico' }]
@@ -32,7 +32,7 @@ themeConfig: {
   sidebar: 'auto', // 默认值：false
 
   //Github 
-  repo: 'Websoft9/ansible-opencart',
+  repo: 'Websoft9/ansible-owncloud',
   editLinks: true,
   docsDir: 'docs',
   docsBranch: 'master',

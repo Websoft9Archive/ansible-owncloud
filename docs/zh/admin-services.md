@@ -46,7 +46,15 @@ sudo systemctl status mysql
 
 ### Redis
 ```shell
-sudo systemctl star redis
+sudo systemctl start redis
+sudo systemctl stop redis
+sudo systemctl restart redis
+sudo systemctl status redis
+```
+
+### Docker
+```shell
+sudo systemctl start docker
 sudo systemctl stop redis
 sudo systemctl restart redis
 sudo systemctl status redis

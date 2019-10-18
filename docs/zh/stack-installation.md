@@ -11,18 +11,16 @@
 ## ownCloud 安装向导
 
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 就进入引导首页
-2. 进入安装界面，同意安装协议
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc1.png)  
-3. 通过环境检测后，进入下一步  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc2.png)
-3. 填写数据库信息（[不知道账号密码？](/zh/stack-accounts.html#mysql)）并设置后台管理账号
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc3.png)
-4. 安装成功后，系统提示“删除安装目录”
-   ![oc1](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc4.png)
-5. 请记得通过SFTP工具删除安装目录（*/data/wwwroot/opencart/install*）
-6. 安装成功，可以分别体验商城前台和后台
+2. 系统首先要求设置一个管理员账号，请设置好并牢记之，然后点击【Storage&Database】
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installsetadmin-websoft9.png)
+3. 选择 OwnCloud 的数据库存储方式，建议选择【MySQL】    
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb001-websoft9.png)
+4. 填写 MySQL 数据库连接信息（[不知道账号密码？](/zh/stack-accounts.html#mysql)）  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb002-websoft9.jpg)
+5. 点击【Flish Setup】，完成安装，获得安装成功的提示，开始体验后台
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installcomplete-websoft9.png)
 
-> 需要了解更多 ownCloud 的使用，请参考官方文档：[ownCloud Docs](http://docs.opencart.com)
+> 需要了解更多 ownCloud 的使用，请参考官方文档：[ownCloud admin_manual](https://doc.owncloud.org/server/admin_manual/)
 
 ## 常见问题
 
@@ -37,3 +35,7 @@
 #### 是否可以采用云厂商提供的 RDS 来存储 ownCloud 数据？
 
 可以
+
+#### OwnCloud 是否支持采用对象存储作为网盘使用？
+
+支持，但需要额外配置

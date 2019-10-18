@@ -15,12 +15,20 @@
    SMTP username: websoft9@163.com
    SMTP password: #wwBJ8    //此密码不是邮箱密码，是需要通过163邮箱后台设置去获取的授权码
    ```
-2. 登录到 ownCloud 后台，完成 SMTP 参数设置  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/opencart/opencart-smtp-websoft9.png)
-  
-   - 输入提供SMTP服务的服务器地址，其中的 ssl://  一定不能省略
-   - 务必准确的填写你的 SMTP 参数
+2. 登录OwnCloud后，打开【admin】>【设置】>【个人】>【常规】，填写发件邮箱地址
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-smtp-1-websoft9.png)
 
-3. 发送测试邮件
+3. 打开【设置】>【管理】>【常规】，依次填写 SMTP 信息
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-smtp-2-websoft9.png)
+
+    * 发送模式选择“SMTP”，加密方式选择“SSL/TLS”;
+    * 输入发送方邮箱地址；
+    * 认证方式选择“登录”，并勾选“需要认证”选项；
+    * 输入SMTP服务器地址和SMTP服务器的端口号；
+    * 输入和发件人邮箱一致的邮箱地址；
+    * 输入该邮箱地址的SMTP服务的授权码或密码；
+    * 存储凭据；
+
+3. 点击“发送邮件”即可测试SMTP是否设置正确。
      
 > 更多邮箱设置（QQ邮箱，阿里云邮箱，Gmail，Hotmail等）以及无法发送邮件等故障之诊断，请参考由Websoft9提供的 [SMTP 专题指南](https://support.websoft9.com/docs/faq/zh/tech-smtp.html)

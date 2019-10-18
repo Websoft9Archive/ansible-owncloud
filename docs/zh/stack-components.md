@@ -6,9 +6,8 @@ ownCloud 预装包包含 ownCloud 运行所需一序列支撑软件（简称为�
 
 ### ownCloud
 
-ownCloud 安装目录： */data/wwwroot/opencart*  
-ownCloud 前台配置文件： */data/wwwroot/opencart/config.php*  
-ownCloud 后台配置文件： */data/wwwroot/opencart/admin/config.php* 
+ownCloud 安装目录： */data/wwwroot/owncloud*  
+ownCloud 配置文件： */data/wwwroot/owncloud/config/config.php*  
 
 > ownCloud 配置文件中包含数据库连接信息，更改了 MySQL 数据库账号密码，此处也需要对应修改
 
@@ -47,6 +46,10 @@ phpMyAdmin installation directory: */data/apps/phpmyadmin*
 phpMyAdmin configuration file: */data/apps/phpmyadmin/config.inc.php*   
 phpMyAdmin vhost configuration file: */etc/httpd/conf.d/phpMyAdmin.conf* or */etc/nginx/php.conf*  
 
+### Docker
+
+安装了 OnlyOffice Document Server（Docker版） 用于文档预览与编辑
+
 ### Redis
 
 Redis configuration file: */etc/redis.conf*  
@@ -56,7 +59,7 @@ Redis logs file: */var/log/redis/redis.log*
 
 ## 端口号
 
-系统所用到的端口号，请通过官方文档 [Package defaults](https://docs.gitlab.com/omnibus/package-information/defaults.html) 查阅。在云服务器中，通过 **[安全组设置](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** 来控制（开启或关闭）端口是否可以被外部访问。 
+在云服务器中，通过 **[安全组设置](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** 来控制（开启或关闭）端口是否可以被外部访问。 
 
 本应用建议开启的端口如下：
 
@@ -65,6 +68,7 @@ Redis logs file: */var/log/redis/redis.log*
 | HTTP | 80 | 通过 HTTP 访问 Odoo | 必须 |
 | HTTPS | 443 | 通过 HTTPS 访问 Odoo | 可选 |
 | MySQL | 3306 | 远程连接 MySQL | 可选 |
+| OnlyOffice Document Server on Docker | 8080 | 调用文档编辑与预览服务 | 可选 |
 
 ## 版本号
 
@@ -100,4 +104,7 @@ mysql -V
 
 # Redis version
 redis-server -v
+
+# Dokcer:
+docker --version
 ```

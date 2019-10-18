@@ -11,18 +11,16 @@ If you have completed the ownCloud deployment on Cloud Platform, the following s
 ## ownCloud Installation Wizard
 
 1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
-2. Agree license, Click "Continue"
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc1.png)
-3. Verify the environment and go to next step  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc2.png)
-4. Database connection configuration, you can use the MySQL in this Server([Don's know password?](/stack-accounts.html#mysql)), and you can use other database services
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc3.png)
-5. When the installation is completed,it will go the following interface
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/oc4.png)
-6. Please delete */data/wwwroot/opencart/install* folder.
-7. You can use ownCloud now
+2. You need to set administrator account, then 【Storage&Database】
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installsetadmin-websoft9.png)
+3. Suggest you select **MySQL** for your database    
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb001-websoft9.png)
+4. Configure the MySQL database connection([Don't know password?](/stack-accounts.html#mysql))  
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb002-websoft9.jpg)
+5. Click 【Flish Setup】, it has been installed successfully.
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installcomplete-websoft9.png)
 
-> Refer to [ownCloud Docs](https://docs.opencart.com/) to get more details
+> Refer to [ownCloud admin_manual](https://doc.owncloud.org/server/admin_manual/) to get more details
 
 ## Q&A
 
@@ -37,3 +35,7 @@ MySQL
 #### Can I use Cloud database for ownCloud?
 
 Yes
+
+#### Can I use Object storage for ownCloud?
+
+Yes, but the configuration is very sufficient

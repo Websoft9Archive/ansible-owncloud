@@ -7,8 +7,7 @@ The ownCloud deployment package contains a sequence software (referred to as "co
 ### ownCloud
 
 ownCloud installation directory: */data/wwwroot/ownCloud*  
-ownCloud catalog configuration file: */data/wwwroot/opencart/config.php*   
-ownCloud admin configuration file: */data/wwwroot/opencart/admin/config.php*
+ownCloud configuration file: * /data/wwwroot/owncloud/config/config.php*   
 
 ### PHP
 
@@ -51,6 +50,10 @@ Redis configuration file: */etc/redis.conf*
 Redis data directory: */var/lib/redis*  
 Redis logs file: */var/log/redis/redis.log*
 
+### Docker
+
+OnlyOffice Document Server on Docker included in this stack
+
 ## Ports
 
 You can control(open or shut down) ports by **[Security Group Setting](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** of your Cloud Server whether the port can be accessed from Internet.
@@ -62,6 +65,7 @@ These ports should be opened for this application:
 | MySQL | 3306 | Remote connect MySQL | Optional |
 | HTTP | 80 | HTTP requests for ownCloud | Required |
 | HTTPS | 443 | HTTPS requests ownCloud | Optional |
+| Docker | 8080 | OnlyOffice Document Server on Docker | Optional |
 
 ## Version
 
@@ -97,4 +101,7 @@ mysql -V
 
 # Redis version
 redis-server -v
+
+# Dokcer:
+docker --version
 ```

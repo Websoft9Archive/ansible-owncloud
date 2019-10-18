@@ -22,18 +22,18 @@ ownCloud(LAMP) 即运行环境采用 **Apache** 作为 Web Server
    ``` text
    #-----HTTPS template start------------
    <VirtualHost *:443>
-    ServerName  opencart.yourdomain.com
-    DocumentRoot "/data/wwwroot/opencart"
-    #ErrorLog "logs/opencart.yourdomain.com-error_log"
-    #CustomLog "logs/opencart.yourdomain.com-access_log" common
-    <Directory "/data/wwwroot/opencart">
+    ServerName  owncloud.yourdomain.com
+    DocumentRoot "/data/wwwroot/owncloud"
+    #ErrorLog "logs/owncloud.yourdomain.com-error_log"
+    #CustomLog "logs/owncloud.yourdomain.com-access_log" common
+    <Directory "/data/wwwroot/owncloud">
     Options Indexes FollowSymlinks
     AllowOverride All
     Require all granted
     </Directory>
     SSLEngine on
-    SSLCertificateFile  /data/cert/opencart.yourdomain.com.crt
-    SSLCertificateKeyFile  /data/cert/opencart.yourdomain.com.key
+    SSLCertificateFile  /data/cert/owncloud.yourdomain.com.crt
+    SSLCertificateKeyFile  /data/cert/owncloud.yourdomain.com.key
     </VirtualHost>
    #-----HTTPS template end------------
    ```

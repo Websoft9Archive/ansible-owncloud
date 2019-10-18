@@ -54,7 +54,8 @@ sidebarDepth: 3
 ```
 通用的手动备份操作步骤如下：
 
-1. 通过 WinSCP 将网站目录（*/data/wwwroot/opencart*）**压缩后**再完整的下载到本地
+1. 通过 WinSCP 将网站源码目录（*/data/wwwroot/owncloud*）**压缩后**再完整的下载到本地
+1. 通过 WinSCP 将网站数据目录（*/data/wwwroot/owncloud/data*）**压缩后**再完整的下载到本地
 2. 通过 phpMyAdmin 导出 ownCloud 数据库
   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
 3. 将程序文件、数据文件和数据库文件放到同一个文件夹，根据日期命名
@@ -62,8 +63,10 @@ sidebarDepth: 3
 
 ### ownCloud 后台备份
 
-ownCloud 后台提供了数据库备份功能
+ownCloud 后台提供在线备份功能
 
-1. 登录 ownCloud 后台
-2. 打开：【System】>【Maintenance】>【Backup/Restore】，开始备份数据库
-  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/opencart-backupdb-websoft9.png)
+1. 登录 ownCloud 后台，安装 **[OwnBackup](http://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 插件
+2. 打开：【Admin】>【OwnBackup】，开始备份
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ownbackup-websoft9.png)
+3. 此插件也可以用于恢复
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-restore-websoft9.png)

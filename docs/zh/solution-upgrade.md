@@ -25,17 +25,37 @@ apt update && apt upgrade -y
 
 ## ownCloud 升级
 
-以下升级步骤是官方升级文档的简化：
+ownCloud提供了非常人性化的升级入口，根据系统的更新提示既可以完成主版本、插件的更新。
 
-1. 备份 ownCloud 程序和数据库文件，下载到本地
-2. [下载](https://www.opencart.com/index.php?route=cms/download)最新的 ownCloud 程序
-3. 使用 SFTP 登录服务器，上传新的代码，覆盖原来的文件
-4. 将本地备份的 ownCloud 根目录下的 `config.php` 文件和 `admin/config.php` 重新上传到服务器
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/Opencart-update001-websoft9.png)  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/Opencart-update002-websoft9.png) 
-5. 浏览器访问：*http://域名/install* 开始升级
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/Opencart-update003-websoft9.png)  
-6. 升级成功提示 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/opencart/Opencart-update004-websoft9.png)  
+> 在升级之前请做好服务器的快照备份，这个是必须的步骤，因为谁都无法保证升级100%成功。
 
-参考官方升级文档：[Upgrading](https://docs.opencart.com/en-gb/upgrading/)
+### 插件升级
+
+升级步骤参加如下：
+
+1. 登录 OwnCloud 之后查看右上角是否有更新通知，若有，请点击其中的更新条目
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updatenotify-websoft9.png)
+
+2. 点击更新条目后 或 访问：*http://域名/index.php/apps/market/#/updates*  进入更新界面
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updatelist-websoft9.png)
+
+3. 点击【更新】按钮，系统进入【UPDATING】，耐心等待更新
+4. 所有更新完成后，更新清单会显示“所有应用都是最新的”
+
+> 如果升级过程出现问题，例如：无法下载升级包/没有读写权限，请确保网络是通的/OwnCloud目录具有读写权限
+
+
+### 主程序升级
+
+主程序升级与插件升级略有差异，具体参考如下：
+
+1. 当有可用升级的程序时，系统提示“ownCloud is available. Get more information ...”
+2. 依次打开：Admin->设置->常规，找到更新管理器，若有更新请点击“打开更新管理器”按钮
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-openupdater-websoft9.png)
+3. 进入 Updater（更新管理器）
+   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updater-websoft9.png)
+4. 点击【Create a checkpoint】，创建一个核心文件备份
+5. 点击【Start】按钮，系统进入自动化升级过程，下载和升级过程比较长，请耐心等待
+6. 升级成功提示
+
+> 由于升级过程会下载最新版本，ownCloud的下载服务器在国外，若下载不成功，需要不定期尝试

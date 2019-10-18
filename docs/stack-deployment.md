@@ -13,7 +13,7 @@ We offer two deployment ownCloud scenarios (the deployment results are the same)
 
 For users with experience with cloud servers, Deploy by Image equated with "one-click deployment". 
 
-Websoft9 published [ownCloud image](https://apps.websoft9.com/opencart) on Cloud Platform, three methods for your deployment:
+Websoft9 published [ownCloud image](https://apps.websoft9.com/owncloud) on Cloud Platform, three methods for your deployment:
 
 * When **Create New Instance** , select the ownCloud image as the system boot template.
 * When **Subscribe ownCloud** on Marketplace, the system will promote you to create a new instance for this image at the same time.
@@ -23,7 +23,7 @@ Websoft9 published [ownCloud image](https://apps.websoft9.com/opencart) on Cloud
 
 **Deploy by Script** means running a script on your cloud instance to pull the pre-packages online to your instance and configure it at the same time.
 
-Websoft9 provide the [ownCloud ansbile automation script](https://github.com/Websoft9/ansible-opencart) on Github. If you are familiar with Ansible, you can deploy the ownCloud to the instance automaticly.
+Websoft9 provide the [ownCloud ansbile automation script](https://github.com/Websoft9/ansible-owncloud) on Github. If you are familiar with Ansible, you can deploy the ownCloud to the instance automaticly.
 
 ## Comparison
 
