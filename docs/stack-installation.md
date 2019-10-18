@@ -12,13 +12,13 @@ If you have completed the ownCloud deployment on Cloud Platform, the following s
 
 1. Using local Chrome or Firefox to visit the URL *https://domain* or *https://Internet IP*, start to install    
 2. You need to set administrator account, then 【Storage&Database】
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installsetadmin-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installsetadmin-websoft9.png)
 3. Suggest you select **MySQL** for your database    
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb001-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb001-websoft9.png)
 4. Configure the MySQL database connection([Don't know password?](/stack-accounts.html#mysql))  
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb002-websoft9.jpg)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installdb002-websoft9.jpg)
 5. Click 【Flish Setup】, it has been installed successfully.
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installcomplete-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-installcomplete-websoft9.png)
 
 > Refer to [ownCloud admin_manual](https://doc.owncloud.org/server/admin_manual/) to get more details
 

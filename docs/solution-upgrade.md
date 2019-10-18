@@ -26,20 +26,14 @@ apt update && apt upgrade -y
 
 ## ownCloud Upgrade
 
-ownCloud provide two methond for Upgrade: ownCloud backend online upgrade and Composer command upgrade  
-
-Below is the step for upgrade online:
-
-## ownCloud Upgrade
-
 OwnCloud provides a very user-friendly upgrade (update) portal, which can complete the update of the main version and APP plug-in according to the update prompt of the system.
 
 ### Plugin Upgrade
 
 1. After logging in to OwnCloud, see if there is an update notification in the upper right corner. if so, please click on the update entry in it.
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updatenotify-websoft9.png)
+  ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updatenotify-websoft9.png)
 2. After clicking on the update entry, enter the update interface.
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updatelist-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updatelist-websoft9.png)
 3. Click the "update" button and the system goes to "update" and wait patiently for the update
 4. When all updates are completed, the update list shows "all apps are up to date"
 
@@ -50,8 +44,8 @@ OwnCloud provides a very user-friendly upgrade (update) portal, which can comple
 
 1. Once have upgrade message "OwnCloud is available". Get more information on how to update.", you should upgrade it now
 2. Go to 【Admin】>【Setting】
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-openupdater-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-openupdater-websoft9.png)
 3. Go to Updater<br />
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updater-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-updater-websoft9.png)
 4. Click the button "Create a checkpoint" first
 5. Click the button "Start"

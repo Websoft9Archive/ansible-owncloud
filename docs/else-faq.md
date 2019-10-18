@@ -8,6 +8,38 @@ Yes
 
 UTF-8
 
+#### Does ownCloud provide a client?
+
+Yes, includes: ownCloud Desktop Client, ownCloud Android App, ownCloud iOS App
+
+#### ownCloud can preview and edit Office document?
+
+No, you need to integrate Document Service for it, [how to set?](/solution-more.html#owncloud-preview-and-edit)
+
+#### ownCloud can integrate external storage?
+
+Yes
+
+#### How can OwnCloud view&edit file online?
+
+You should complete the [OnlyOffice setting](admin-onlyds) on your OwnCloud
+
+#### How do I transfer files from one user to another?
+
+See [transferring files to another user](https://doc.owncloud.org/server/admin_manual/configuration/files/file_sharing_configuration.html#transferring-files-to-another-user).
+
+#### How do I deal with problems caused by using self-signed SSL certificates?
+
+See [the security section of the OCC command](https://doc.owncloud.org/server/admin_manual/configuration/server/occ_command.html#security).
+
+#### I'm the admin and I lost my password! What do I do now!
+
+See [the reset admin password documentation](https://doc.owncloud.org/server/admin_manual/configuration/user/reset_admin_password.html).
+
+#### What is a Federated System?
+
+A Federated System is another ownCloud or [OpenCloudMesh](https://oc.owncloud.com/opencloudmesh.html) supporting cloud service.
+
 #### What the difference between the ownCloud(LAMP) and ownCloud(LEMP) ?
 
 LAMP is using Apache as Web Server for your ownCloud  
@@ -19,7 +51,7 @@ You can use the RDS for ownCloud if you need,and just need to modify the databas
 
 #### Where is the database connection configuration of ownCloud?
 
-Database configuration information in *LocalSettings.php* in the [ownCloud installation directory](/stack-components.md#opencart)
+Database configuration information in *config.php* in the [ownCloud installation directory](/stack-components.md#owncloud)
 
 #### If there is no domain name, can I deploy ownCloud?
 
@@ -51,7 +83,7 @@ No, you don't need to change them because LAMP/LNMP was set to changed automatic
 
 #### How to modify the path of ownCloud?
 
-Example application's path is: */data/wwwroot/opencart*, you can modify it by [vhost configuration file](/stack-components.md#apache)
+Example application's path is: */data/wwwroot/owncloud*, you can modify it by [vhost configuration file](/stack-components.md#apache)
 
 #### How to delete 9Panel?
 

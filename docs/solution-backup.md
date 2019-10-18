@@ -60,8 +60,8 @@ The general manual backup operation steps are as follows:
 
 This section provides ownCloud online backup solution
 
-1. Log in ownCloud console as administrator, install **[OwnBackup](http://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 
+1. Log in ownCloud console as administrator, install **[OwnBackup](https://en.websoft9.com/xdocs/owncloud-image-guide/#using-apps)** 
 2. Go to【Admin】>【OwnBackup】, start backup
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ownbackup-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ownbackup-websoft9.png)
 3. You can restore it also
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-restore-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-restore-websoft9.png)

@@ -16,7 +16,7 @@ ownCloud domain name binding steps:
    #### ownCloud (LAMP) bind domain #### 
 
      <VirtualHost *:80>
-     ServerName opencart.mydomain.com # modify it for you
+     ServerName owncloud.mydomain.com # modify it for you
      DocumentRoot "/data/wwwroot/ownCloud"
      ...
      
@@ -24,7 +24,7 @@ ownCloud domain name binding steps:
 
      server {
       listen 80;
-      server_name    opencart.example.com; # modify it for you
+      server_name    owncloud.example.com; # modify it for you
      ...
 
    ```
@@ -36,108 +36,103 @@ ownCloud domain name binding steps:
 You can change the domain of ownCloud by the following steps:
 
 1. Complete the new **Domain resolution and Domain binding**
-2. 修改 [OwnCloud 配置文件](/zh/stack-components.html#owncloud)中的域名值
+2. Modify [ownCloud configuration file](/stack-components.html#owncloud)
    ```
-   'overwrite.cli.url' => 'owncloud.yourdomain.com', # 修改为新域名
+   'overwrite.cli.url' => 'owncloud.yourdomain.com', # Set it to your new domain
    ```
-3. [重启 PHP-FPM 服务](http://support.websoft9.com/docs/owncloud/zh/admin-services.html#php-fpm)后生效
+3. [Restart PHP-FPM service](/admin-services.html#php-fpm)
 
 ## ownCloud language
 
-登录owncloud，在后台 【Personal】>【General】中设置语言
+Log in owncloud, go to【Personal】>【General】 and set your language
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-zh-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-zh-websoft9.png)
 
 ## ownCloud install apps
 
-Owncloud [Marketplace](https://marketplace.owncloud.com/) 包含大量的扩展（也叫apps），下面介绍如何安装它们
+Owncloud [Marketplace](https://marketplace.owncloud.com/) have lots of extensions(apps), the following is the step for installing apps
 
-1. 访问 [Marketplace](https://marketplace.owncloud.com/) ，搜索所需的应用（以 OwnBackup 为例）
-![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-searchapps-websoft9.jpg)
-2. 下载并解压
-3. 上传到 ownCloud 应用目录：*data/wwwroot/owncloud/apps*
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ftp-websoft9.png)
-4. 启用 OwnBackup
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-enableapps-websoft9.png)
+1. Visit [Marketplace](https://marketplace.owncloud.com/), find the app you want to use(e.g OwnBackup)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-searchapps-websoft9.jpg)
+2. Download and unzip it
+3. Upload it to your ownCloud's apps directory: *data/wwwroot/owncloud/apps*
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-ftp-websoft9.png)
+4. Enable OwnBackup
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-enableapps-websoft9.png)
 
-> 除了下载安装之外，也可以通过 ownCloud 后台在线安装 Marketplace 应用
+> You can install Marketplace's apps online from the ownCloud console also
 
 ### ownCloud LDAP
 
-当企业网盘与多个人使用的时候，用户需要与内部域控集成，以保证用户可以通过Windows账号集成。
-
-OwnCloud提供了 LDAP 集成工具，具体参考官方方案：*[User Authentication with LDAP](https://doc.owncloud.org/server/admin_manual/configuration/user/user_auth_ldap.html)*
+Refer to *[User Authentication with LDAP](https://doc.owncloud.org/server/admin_manual/configuration/user/user_auth_ldap.html)*
 
 ### ownCloud CLI-OCC
 
-OCC命令是OwnCloud的命令行界面。您可以使用OCC执行许多常见的服务器操作，例如安装和升级OwnCloud，管理用户，加密，密码，LDAP设置等。
+ownCloud's occ command (ownCloud console) is ownCloud's command-line interface. You can perform many common server operations with occ, such as installing and upgrading ownCloud, manage users, encryption, passwords, LDAP setting, and more.
 
 ## ownCloud external storage
 
-ownCloud 支持多种流行的企业存储服务，具体使用步骤如下：
+The External Storage Support application enables you to mount external storage services and devices as secondary ownCloud storage devices. You may also allow users to mount their own external storage services.
 
-1. 登录 ownCloud 后台，安装 **External storage support** 扩展
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-enablestorage-websoft9.png)
+1. Log in ownCloud console, install **External storage support** application
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-enablestorage-websoft9.png)
 
-2. 打开：【Admin】>【Add storage】>【External Storage】，选择一个外部存储服务
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-enablestorage002-websoft9.png)
+2. Open【Admin】>【Add storage】>【External Storage】, select an external storage service
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-enablestorage002-websoft9.png)
 
-3. 根据实际情况进行设置
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-auth_mechanism-websoft9.png)
+3. Set it
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-auth_mechanism-websoft9.png)
 
-更多详情参考官方文档：[External Storage](https://doc.owncloud.org/server/admin_manual/configuration/files/external_storage/index.html)
+More details please refer to [External Storage](https://doc.owncloud.org/server/admin_manual/configuration/files/external_storage/index.html)
 
-## ownCloud tranfer
+## ownCloud transfer
 
-ownCloud 的程序和数据文件默认均存在系统盘，你要转移到数据盘（或对象存储），步骤如下：
+ownCloud source code and data is in system disk by default, you can transfer them to data disk or  Object storage:
 
 ### to data disk
 
-1. 在服务器所在的云平台上购买数据盘，并**挂载**到 OwnCloud 服务器
-2. 使用 SFTP 工具连接服务器，停止服务
+1. Purchase a data disk from Cloud Platform, then **attach** it to ownCloud Server
+2. Use SFTP tool to connect Server and stop service
    ```
    systemctl stop httpd
    ```
-3. 新建一个 */data/wwwroot/owncloud2* 文件夹
-4. 初始化数据盘，并将数据盘 **mount** 到新建的 *owncloud2* 文件夹
-5. 将 */data/wwwroot/owncloud* 下的数据全部拷贝到 */data/wwwroot/owncloud2*  
-6. 修改 OwnCloud [虚拟主机配置文件](/zh/stack-components.html#apache) 的路径
-7. 启动服务后生效
+3. Create a new folder */data/wwwroot/owncloud2* 
+4. Initialize data disk, and **mount** it to *owncloud2* folder
+5. Copy all files in */data/wwwroot/owncloud* to */data/wwwroot/owncloud2*  
+6. Modify the OwnCloud directory in  [vhost configuration file](/zh/stack-components.html#apache) 
+7. Start the service
    ```
    systemctl start httpd
    ```
 
 ### to Object storage
 
-1. 在服务器所在的云平台上购买对象存储，新建一个 **bucket**
-2. 使用 SFTP 工具连接服务器，停止服务
+1. Purchase Object storage from Cloud Platform, then create a new **bucket**
+2. Use SFTP tool to connect Server and stop service
    ```
    systemctl stop httpd
    ```
-3. 新建一个 */data/wwwroot/owncloud2* 文件夹
-4. 将对象存储的 bucket **mount** 到新建的 *owncloud2* 文件夹
-5. 将 */data/wwwroot/owncloud* 下的数据全部拷贝到 */data/wwwroot/owncloud2*  
-6. 修改 OwnCloud [虚拟主机配置文件](/zh/stack-components.html#apache) 的路径
-7. 启动服务后生效
+3. Create a new folder */data/wwwroot/owncloud2* 
+4. Then **mount** it to *owncloud2* folder
+5. Copy all files in */data/wwwroot/owncloud* to */data/wwwroot/owncloud2*  
+6. Modify the OwnCloud directory in  [vhost configuration file](/zh/stack-components.html#apache) 
+7. Start the service
    ```
    systemctl start httpd
    ```
-8. 设置对象存储开机自动挂载（不同云平台操作不同）
+8. Set the object storage to boot automatically (different cloud platform operations)
 
-> 以上两种数据转移方案中，**mount** 操作对新手来说是几乎是不可能独立完成的任务。另外，如果转移的数据超过10G，会存在拷贝失败的风险
-
+> The **mount** command is very difficult for user, and there is a risk of copy failure if the data is exceed 10G
 
 ## ownCloud preview and edit
 
-ownCloud 自身是不能对 Office 文件进行预览或编辑的，需要集成外部的 Office 文档编辑和预览服务才可以具备这样的功能。  
+ownCloud can't preview and edit Office document itself, you need to integrate document Server service for ownCloud to implement this function:
 
-Websoft9 提供的 ownCloud 部署包内置了 OnlyOffice Document Server(Docker版) ，此软件可以用于给 OwnCloud 提供文档预览与编辑服务，具体设置步骤如下：
-
-1. 开启服务器安全组的 8080 端口
-2. 登录到 OwnCloud ，单击左上角进入【Market】页面
-	![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-preview-1-websoft9.png)
-3. 找到【ONLYOFFICE】插件，安装它
-4. 安装完成后，找到**设置**页面，对 ONLYOFFICE 进行如图所示的设置
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-preview-2-websoft9.png)
-   > 图中涂抹处应修改为**服务器公网IP**
-5. 返回到首页，刷新或重新登录，然后单击 Office 文件即可在线预览和编辑。
+1. Enable the **TCP:8080** port on **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)**
+2. Log in to OwnCloud console, go to 【Market】page
+	![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-preview-1-websoft9.png)
+3. Find the application【ONLYOFFICE】 and install it
+4. Set the 【ONLYOFFICE】
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-preview-2-websoft9.png)
+   > The smear in the figure should be modified to **Internet IP**
+5. Refresh the ownCloud, test the preview and edit function of documentation

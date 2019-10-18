@@ -34,10 +34,10 @@ ownCloud提供了非常人性化的升级入口，根据系统的更新提示既
 升级步骤参加如下：
 
 1. 登录 OwnCloud 之后查看右上角是否有更新通知，若有，请点击其中的更新条目
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updatenotify-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updatenotify-websoft9.png)
 
 2. 点击更新条目后 或 访问：*http://域名/index.php/apps/market/#/updates*  进入更新界面
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updatelist-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updatelist-websoft9.png)
 
 3. 点击【更新】按钮，系统进入【UPDATING】，耐心等待更新
 4. 所有更新完成后，更新清单会显示“所有应用都是最新的”
@@ -51,9 +51,9 @@ ownCloud提供了非常人性化的升级入口，根据系统的更新提示既
 
 1. 当有可用升级的程序时，系统提示“ownCloud is available. Get more information ...”
 2. 依次打开：Admin->设置->常规，找到更新管理器，若有更新请点击“打开更新管理器”按钮
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-openupdater-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-openupdater-websoft9.png)
 3. 进入 Updater（更新管理器）
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updater-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-updater-websoft9.png)
 4. 点击【Create a checkpoint】，创建一个核心文件备份
 5. 点击【Start】按钮，系统进入自动化升级过程，下载和升级过程比较长，请耐心等待
 6. 升级成功提示

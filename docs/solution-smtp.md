@@ -16,10 +16,10 @@ Follow is the sample using **SendGrid's SMTP Service** to configure sending mail
    SMTP password: #fdfwwBJ8f    
    ```
 2. Log in ownCloud console as administrator, go to 【admin】>【Setting】>【Personal】>【General】, set send to Email address
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-smtp-1-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-smtp-1-websoft9.png)
 
 3. Go to【Setting】>【Admin】>【General】>【Email Server】, select smtp for send mode and fill in the suitable smtp configuration
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-smtp-2-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/owncloud/owncloud-smtp-2-websoft9.png)
 
 4. Click "Send email" to test your SMTP settings
      
