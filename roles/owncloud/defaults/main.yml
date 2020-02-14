@@ -1,0 +1,10 @@
+#Moodle版本，需定期维护
+owncloud_version: v10.3.2
+
+#Web服务器：apache | nginx，通过交互式选择获取
+owncloud_webs: apache
+
+owncloud_vhost_dir: /etc/httpd/vhost
+owncloud_vhost_src: vhost.conf
+owncloud_service: httpd
+owncloud_owner: apache
