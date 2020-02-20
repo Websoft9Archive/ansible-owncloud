@@ -17,15 +17,8 @@
     msg: runtime {{ owncloud_vhost_dir }}, {{owncloud_vhost_src}}, {{owncloud_service}}, {{owncloud_owner}}, {{owncloud_webs}}, {{ansible_distribution}}
 
 # OwnCloud
-- name: delete www.example.com
-  file:
-    path: /data/wwwroot/www.example.com
-    state: absent
-
-- name: delete exsiting Directory
-  file:
-    path: /data/wwwroot/{{owncloud_name}}
-    state: absent
+- name: Remove extra dir
+  shell: rm -rf /data/wwwroot/*
 
 - name: Create app Directory
   file:
@@ -39,8 +32,8 @@
     dest: /data/wwwroot/owncloud
     version: "{{owncloud_version}}"
 
-- name: Rename directory name
-  shell: mv /data/wwwroot/* /data/wwwroot/{{owncloud_name}}
+# - name: Rename directory name
+#   shell: mv /data/wwwroot/* /data/wwwroot/{{owncloud_name}}
 
 - name: Permission occ
   file:
