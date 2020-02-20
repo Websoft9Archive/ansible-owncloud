@@ -8,16 +8,13 @@
     owncloud_vhost_src: "{{php_runtime_meta[ansible_distribution][owncloud_webs].vhost_src}}"
     owncloud_service: "{{php_runtime_meta[ansible_distribution][owncloud_webs].service}}"
     owncloud_owner: "{{php_runtime_meta[ansible_distribution][owncloud_webs].owner}}"
+    owncloud_name: "owncloud"
+    owncloud_title: "OwnCloud"
+    owncloud_download_url: "https://github.com/owncloud/core.git"
+    owncloud_version: "v10.3.2"
 
 - debug:
     msg: runtime {{ owncloud_vhost_dir }}, {{owncloud_vhost_src}}, {{owncloud_service}}, {{owncloud_owner}}, {{owncloud_webs}}, {{ansible_distribution}}
-
-# 9panel
-- name: Enabled 9panel I
-  lineinfile:
-    path: /data/apps/9panel/js/websoft9.js
-    regexp: 'var set_apps=\["Example"\];'
-    line: 'var set_apps=["OwnCloud"];'
 
 # OwnCloud
 - name: delete www.example.com
@@ -25,17 +22,25 @@
     path: /data/wwwroot/www.example.com
     state: absent
 
-- name: Create Directory
+- name: delete exsiting Directory
   file:
-    path: /data/wwwroot/owncloud
+    path: /data/wwwroot/{{owncloud_name}}
+    state: absent
+
+- name: Create app Directory
+  file:
+    path: /data/wwwroot/{{owncloud_name}}
     state: directory
     mode: 0755
   
 - name: Download OwnCloud
   git:
-    repo: https://github.com/owncloud/core.git
+    repo: "{{owncloud_download_url}}"
     dest: /data/wwwroot/owncloud
     version: "{{owncloud_version}}"
+
+- name: Rename directory name
+  shell: mv /data/wwwroot/* /data/wwwroot/{{owncloud_name}}
 
 - name: Permission occ
   file:
@@ -56,7 +61,7 @@
     day: "*"
     month: "*"
     weekday: "*"
-    user: "{{owncloud_webs}}"
+    user: "{{owncloud_owner}}"
     job: "php -f /data/wwwroot/owncloud/cron.php"
 
 # 系统通用
