@@ -31,7 +31,7 @@
     version: "{{owncloud_version}}"
 
 - name: Rename dir name
-  shell: if [ ! -d "/data/wwwroot/{{owncloud_name}}" ]; then mv *{{owncloud_name}}* {{owncloud_name}}; fi
+  shell: cd /data/wwwroot; if [ ! -d "{{owncloud_name}}" ]; then mv *{{owncloud_name}}* {{owncloud_name}}; fi
 
 - name: Permission occ
   file:
