@@ -55,6 +55,12 @@
     user: "{{owncloud_owner}}"
     job: "php -f /data/wwwroot/owncloud/cron.php"
 
+- name: make
+  command: make
+  args:
+    chdir: /data/wwwroot/{{owncloud_name}}
+  ignore_errors: True
+
 # 系统通用
 - name: Permission directory
   shell: find /data/wwwroot -type d -exec chmod 750 {} \;
