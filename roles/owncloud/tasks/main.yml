@@ -4,10 +4,10 @@
 
 #Modify var for this playbook
 - set_fact:
-    owncloud_vhost_dir: "{{php_runtime_meta[ansible_distribution][owncloud_webs].vhost_dir}}"
-    owncloud_vhost_src: "{{php_runtime_meta[ansible_distribution][owncloud_webs].vhost_src}}"
-    owncloud_service: "{{php_runtime_meta[ansible_distribution][owncloud_webs].service}}"
-    owncloud_owner: "{{php_runtime_meta[ansible_distribution][owncloud_webs].owner}}"
+    owncloud_vhost_dir: "{{php_runtime_meta[ansible_os_family][owncloud_webs].vhost_dir}}"
+    owncloud_vhost_src: "{{php_runtime_meta[ansible_os_family][owncloud_webs].vhost_src}}"
+    owncloud_service: "{{php_runtime_meta[ansible_os_family][owncloud_webs].service}}"
+    owncloud_owner: "{{php_runtime_meta[ansible_os_family][owncloud_webs].owner}}"
 
 - debug:
     msg: runtime {{ owncloud_vhost_dir }}, {{owncloud_vhost_src}}, {{owncloud_service}}, {{owncloud_owner}}, {{owncloud_webs}}, {{ansible_distribution}}
