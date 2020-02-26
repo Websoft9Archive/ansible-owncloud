@@ -10,5 +10,5 @@ owncloud_service: httpd
 owncloud_owner: apache
 owncloud_name: "owncloud"
 owncloud_title: "OwnCloud"
-owncloud_download_url: "https://github.com/owncloud/core.git"
-owncloud_version: "v10.3.2"  #版本号需定期维护
+#下载链接需定期维护
+owncloud_download_url: "https://download.owncloud.org/community/owncloud-10.3.2.zip"
