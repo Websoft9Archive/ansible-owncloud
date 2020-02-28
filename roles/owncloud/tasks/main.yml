@@ -8,6 +8,7 @@
     owncloud_vhost_src: "{{php_runtime_meta[ansible_os_family][owncloud_webs].vhost_src}}"
     owncloud_service: "{{php_runtime_meta[ansible_os_family][owncloud_webs].service}}"
     owncloud_owner: "{{php_runtime_meta[ansible_os_family][owncloud_webs].owner}}"
+    owncloud_db_password: "{{mysql_root_password}}"
 
 - debug:
     msg: runtime {{ owncloud_vhost_dir }}, {{owncloud_vhost_src}}, {{owncloud_service}}, {{owncloud_owner}}, {{owncloud_webs}}, {{ansible_distribution}}
@@ -70,4 +71,7 @@
     
   - name: restart Apache or Nginx
     service: name={{owncloud_service}} state=restarted enabled=yes
+
+  - name: restart php-fpm
+    service: name=php-fpm state=restarted
 
