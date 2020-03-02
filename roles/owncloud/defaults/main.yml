@@ -12,4 +12,5 @@ owncloud_owner: apache
 owncloud_name: "owncloud"
 owncloud_title: "OwnCloud"
 #下载链接需定期维护
-owncloud_download_url: "https://download.owncloud.org/community/owncloud-latest.zip"
+owncloud_download_url: "https://download.owncloud.org/download/community/owncloud-latest.zip"
+
