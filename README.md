@@ -24,7 +24,7 @@
 
 ## 本项目安装的是 owncloud 最新版吗？
 
-本项目通过下载 OwnCloud 源码进行安装，下载链接存储在：[role/owncloud/default/main.yml](/roles/owncloud/defaults/main.yml)。下载链接默认总是为最新版链接，我们也会定期检查并测试官方版本的可用性，保证用户可以顺利安装最新版。
+本项目通过下载 OwnCloud 源码进行安装，下载链接存储在：[role/owncloud/default/main.yml](/roles/owncloud/defaults/main.yml)。下载链接默认总是为最新版链接，我们也会定期检查并测试官方版本的可用性，保证用户可以顺利安装最新版。如果你想了解版本号，请打开ownCloud官方[下载中心](https://owncloud.org/download/)获取
 
 ```
 owncloud_download_url: "https://download.owncloud.org/community/owncloud-latest.zip"
