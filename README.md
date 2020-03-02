@@ -24,16 +24,11 @@
 
 ## 本项目安装的是 owncloud 最新版吗？
 
-本项目通过下载[OwnCloud源码](https://github.com/owncloud/core)进行安装，其中下载链接存储在：[role/owncloud/default/main.yml](/roles/owncloud/defaults/main.yml)
+本项目通过下载 OwnCloud 源码进行安装，下载链接存储在：[role/owncloud/default/main.yml](/roles/owncloud/defaults/main.yml)。下载链接默认总是为最新版链接，我们也会定期检查并测试官方版本的可用性，保证用户可以顺利安装最新版。
 
 ```
-#下载链接需定期维护
-owncloud_download_url: "https://download.owncloud.org/community/owncloud-10.3.2.zip"
+owncloud_download_url: "https://download.owncloud.org/community/owncloud-latest.zip"
 ```
-
-如果你想修改版本号，请先查看 OwnCloud 仓库 [releases](https://github.com/owncloud/core/releases) 的下载链接，再修改 [role/owncloud/default/main.yml](/roles/owncloud/defaults/main.yml) 文件的 `owncloud_download_url` 变量值即可安装指定版本。
-
-我们会定期检查版本，并测试官方版本的可用性，以保证用户可以顺利安装最新版。
 
 ## 安装指南
 
