@@ -46,6 +46,3 @@
 
 - src: http://github.com/websoft9dev/role_docker
   version: master
-
-- src: http://github.com/websoft9dev/role_docker_onlyofficedocumentserver
-  version: master
