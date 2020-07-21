@@ -1,5 +1,5 @@
 #Moodle版本，需定期维护
-owncloud_version: v10.3.2
+owncloud_version: v10.4.1
 
 #Web服务器：apache | nginx，通过交互式选择获取
 owncloud_webs: apache
