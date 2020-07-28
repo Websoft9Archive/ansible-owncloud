@@ -1,5 +1,6 @@
 # Global
 region: "0"
+common_os_support: ["CentOS", "Amazon"]
 
 mysql_version: "5.7"       
 mysql_root_password: "123456"
