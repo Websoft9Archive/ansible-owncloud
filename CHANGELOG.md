@@ -3,7 +3,8 @@
 ## To do
 
 * 添加 Nginx 支持
-* 添加 Ubuntu18.04, Amazon Linux2 支持
+* 添加 Ubuntu18.04
+* 官方推荐 Apache 2.4 with prefork and mod_php，需要求证
 
 ## Logs
 
