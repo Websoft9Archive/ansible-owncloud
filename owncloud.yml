@@ -13,13 +13,6 @@
       private: no
       default: 1
 
-    - name: 'onlyoffice_selection'
-      prompt: "\nDo you want to install OnlyOffice documentserver? [ 1/2 ] \n\n
-      1: Yes\n
-      2: No\n"
-      private: no
-      default: 1
-
   vars:
 
     webs_select:
@@ -29,21 +22,15 @@
     infrastructure_select:
       '1': 'LAMP'
       '2': 'LNMP'
-
-    onlyoffice_select:
-      '1': True
-      '2': ''
-
+      
     runtime_name: "{{infrastructure_select[webs_selection] | lower}}" 
     owncloud_webs: "{{webs_select[webs_selection]}}" 
-    owncloud_onlyoffice: "{{onlyoffice_select[onlyoffice_selection]}}" 
     w9panel_webs: "{{webs_select[webs_selection]}}" 
 
     w9panel_set_infrastructure: "{{infrastructure_select[webs_selection]}}" 
     w9panel_set_apps: 
       - OwnCloud
     
-  
   pre_tasks:
     - debug:
         msg: OwnCloud will be installed on {{w9panel_set_infrastructure}}, OS is {{ansible_distribution}}
