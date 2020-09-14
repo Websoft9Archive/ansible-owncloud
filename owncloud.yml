@@ -36,7 +36,17 @@
         msg: OwnCloud will be installed on {{w9panel_set_infrastructure}}, OS is {{ansible_distribution}}
 
   roles:
-
+    - {role: role_common, tags: "role_common"}
+    - {role: role_cloud, tags: "role_cloud"}
+    - {role: role_apache, tags: "role_apache", when: owncloud_webs == 'apache'}
+    - {role: role_nginx, tags: "role_nginx", when: owncloud_webs == 'nginx'}
+    - {role: role_mysql, tags: "role_mysql"}
+    - {role: role_php, tags: "role_php"}
+    - {role: role_inotify_watch, tags: "role_inotify_watch"}
+    - {role: role_docker, tags: "role_docker"}
+    - {role: role_9panel, tags: "role_9panel"}
+    - {role: role_redis, tags: "role_redis"}
+    - {role: role_docker, tags: "role_docker"}
     - {role: owncloud, tags: "owncloud"}
     - {role: role_init, tags: "role_init"}
     - {role: role_preend, tags: "role_preend"}
