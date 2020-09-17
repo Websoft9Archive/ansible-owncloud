@@ -35,14 +35,23 @@ Nginx logs file: */var/log/nginx/*
 
 MySQL installation directory: */usr/local/mysql*  
 MySQL data directory: */data/mysql*  
-MySQL configuration file: */etc/my.cnf*    
-MySQL Web Management URL: *http://Internet IP/phpmyadmin*, [get credential](/stack-accounts.md)
+MySQL configuration file: */etc/my.cnf*   
 
-### phpMyAdmin
+MySQL Web Management refer to: [MySQL management](/mysql.md)
 
-phpMyAdmin installation directory: */data/apps/phpmyadmin*  
-phpMyAdmin configuration file: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin vhost configuration file: */etc/httpd/conf.d/phpMyAdmin.conf* or */etc/nginx/php.conf*  
+### Docker
+
+These tools installed on Docker for you:
+
+#### OnlyOffice Document Server
+
+OnlyOffice Document Server directory：*/data/apps/onlyoffice-documentserver*  
+OnlyOffice Document Server docker compose file：*/data/apps/onlyoffice-documentserver/docker-compose.yml*  
+
+####  phpMyAdmin
+
+phpMyAdmin directory：*/data/apps/phpmyadmin*  
+phpMyAdmin docker compose file：*/data/apps/phpmyadmin/docker-compose.yml*  
 
 ### Redis
 
@@ -65,7 +74,8 @@ These ports should be opened for this application:
 | MySQL | 3306 | Remote connect MySQL | Optional |
 | HTTP | 80 | HTTP requests for ownCloud | Required |
 | HTTPS | 443 | HTTPS requests ownCloud | Optional |
-| Docker | 8080 | OnlyOffice Document Server on Docker | Optional |
+| TCP | 9002 | OnlyOffice Document Server on Docker | Optional |
+| TCP | 9090 | phpMyAdmin on Docker | Optional |
 
 ## Version
 

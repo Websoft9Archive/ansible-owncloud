@@ -38,17 +38,23 @@ Nginx 日志文件： */var/log/nginx/*
 MySQL 安装路径: */usr/local/mysql*  
 MySQL 数据文件 */data/mysql*  
 MySQL 配置文件: */etc/my.cnf*    
-MySQL 可视化管理地址: *http://服务器公网IP/phpmyadmin*，用户名和密码请见 [账号密码](/zh/stack-accounts.md) 章节。
 
-### phpMyAdmin
-
-phpMyAdmin installation directory: */data/apps/phpmyadmin*  
-phpMyAdmin configuration file: */data/apps/phpmyadmin/config.inc.php*   
-phpMyAdmin vhost configuration file: */etc/httpd/conf.d/phpMyAdmin.conf* or */etc/nginx/php.conf*  
+MySQL 可视化管理参考：[MySQL管理](/zh/admin-mysql.md) 章节。
 
 ### Docker
 
-安装了 OnlyOffice Document Server（Docker版） 用于文档预览与编辑
+基于 Docker 安装了如下辅助工具：
+
+#### OnlyOffice Document Server
+
+OnlyOffice Document Server directory：*/data/apps/onlyoffice-documentserver*  
+phpMyAdmin docker compose file：*/data/apps/onlyoffice-documentserver/docker-compose.yml*  
+
+####  phpMyAdmin
+
+phpMyAdmin directory：*/data/apps/phpmyadmin*  
+phpMyAdmin docker compose file：*/data/apps/phpmyadmin/docker-compose.yml*  
+
 
 ### Redis
 
@@ -63,12 +69,13 @@ Redis logs file: */var/log/redis/redis.log*
 
 本应用建议开启的端口如下：
 
-| 名称 | 端口号 | 用途 |  必要性 |
+| 类型 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| HTTP | 80 | 通过 HTTP 访问 ownCloud | 必须 |
-| HTTPS | 443 | 通过 HTTPS 访问 ownCloud | 可选 |
-| MySQL | 3306 | 远程连接 MySQL | 可选 |
-| OnlyOffice Document Server on Docker | 8080 | 调用文档编辑与预览服务 | 可选 |
+| TCP | 80 | 通过 HTTP 访问 ownCloud | 必须 |
+| TCP | 443 | 通过 HTTPS 访问 ownCloud | 可选 |
+| TCP | 3306 | 远程连接 MySQL | 可选 |
+| TCP | 9002 | OnlyOffice Document Server on Docker | 可选 |
+| TCP | 9090 | phpMyAdmin on Docker | 可选 |
 
 ## 版本号
 

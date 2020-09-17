@@ -10,7 +10,7 @@
 
 #### ownCloud 自身能够预览和编辑 Office 文档吗？
 
-不可以，需要连接第三方的文档编辑和服务才可以，[设置参考](/zh/solution-more.html#owncloud-文件预览与编辑)
+不可以，需要连接第三方的文档编辑和服务才可以，参考：[文件预览与编辑设置](/zh/solution-more.html#owncloud-文件预览与编辑)
 
 #### ownCloud 支持集成外部存储吗？
 
