@@ -25,7 +25,6 @@ mysql_databases:
  
 mysql_users:
  - name: owncloud
-   host: localhost
    priv: 'owncloud.*:ALL'
 
 # init all users password for MySQL
