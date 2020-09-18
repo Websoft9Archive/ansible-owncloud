@@ -47,8 +47,8 @@ MySQL 可视化管理参考：[MySQL管理](/zh/admin-mysql.md) 章节。
 
 #### OnlyOffice Document Server
 
-OnlyOffice Document Server directory：*/data/apps/onlyoffice-documentserver*  
-phpMyAdmin docker compose file：*/data/apps/onlyoffice-documentserver/docker-compose.yml*  
+OnlyOffice Document Server directory：*/data/apps/onlyofficedocumentserver*  
+phpMyAdmin docker compose file：*/data/apps/onlyofficedocumentserver/docker-compose.yml*  
 
 ####  phpMyAdmin
 
