@@ -45,8 +45,8 @@ These tools installed on Docker for you:
 
 #### OnlyOffice Document Server
 
-OnlyOffice Document Server directory：*/data/apps/onlyoffice-documentserver*  
-OnlyOffice Document Server docker compose file：*/data/apps/onlyoffice-documentserver/docker-compose.yml*  
+OnlyOffice Document Server directory：*/data/apps/onlyofficedocumentserver*  
+OnlyOffice Document Server docker compose file：*/data/apps/onlyofficedocumentserver/docker-compose.yml*  
 
 ####  phpMyAdmin
 
