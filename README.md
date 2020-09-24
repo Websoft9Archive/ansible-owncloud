@@ -1,7 +1,7 @@
 
 # OwnCloud 自动化安装与部署
 
-本项目是由 [Websoft9](https://www.websoft9.com) 研发的 [OwnCloud](https://owncloud.org/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 OwnCloud，让原本复杂的安装过程变得没有任何技术门槛。  
+本项目是由 [Websoft9](https://www.websoft9.com) 研发的 [ownCloud](https://owncloud.org/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 ownCloud，让原本复杂的安装过程变得没有任何技术门槛。  
 
 本项目是开源项目，采用 LGPL3.0 开源协议。
 
@@ -18,13 +18,13 @@
 
 ## 组件
 
-包含的核心组件为：owncloud + Apache/Nginx + MySQL + PHP + ONLYOFFICE Document Server + Docker
+包含的核心组件为：ownCloud + Apache/Nginx + MySQL + PHP + ONLYOFFICE Document Server + Docker
 
 更多请见：[参数表](/docs/zh/stack-components.md)
 
 ## 本项目安装的是 owncloud 最新版吗？
 
-本项目通过下载 OwnCloud 源码进行安装，下载链接存储在：[role/owncloud/default/main.yml](/roles/owncloud/defaults/main.yml)。下载链接默认总是为最新版链接，我们也会定期检查并测试官方版本的可用性，保证用户可以顺利安装最新版。版本号从ownCloud官方[下载中心](https://owncloud.org/download/)获取
+本项目通过下载 ownCloud 源码进行安装，下载链接存储在：[role/owncloud/default/main.yml](/roles/owncloud/defaults/main.yml)。下载链接默认总是为最新版链接，我们也会定期检查并测试官方版本的可用性，保证用户可以顺利安装最新版。版本号从ownCloud官方[下载中心](https://owncloud.org/download/)获取
 
 ```
 owncloud_download_url: "https://download.owncloud.org/community/owncloud-latest.zip"
@@ -45,7 +45,7 @@ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/master/scripts/
 1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
 2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
 
-多种原因导致无法顺利安装，请使用我们在公有云上发布的 [owncloud镜像](https://apps.websoft9.com/owncloud) 的部署方式
+多种原因导致无法顺利安装，请使用我们在公有云上发布的 [ownCloud镜像](https://apps.websoft9.com/owncloud) 的部署方式
 
 
 ## 文档
