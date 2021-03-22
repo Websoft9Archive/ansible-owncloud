@@ -16,6 +16,11 @@
 
 支持多种主流外部存储服务
 
+#### 为什么在云厂商购买的云存储空间和ownCloud 显示不一致 ？
+
+需要进入用户管理，设置该用户的配额为*无限*
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/owncloud/owncloud-setting-websoft9.png)
+
 #### ownCloud(LAMP)，ownCloud(LNMP)等商品括号中的 LAMP,LNMP 是什么意思？
 
 LAMP和LNMP代表支持 ownCloud 运行所对应的基础环境，具体参考[环境说明](/zh/admin-runtime.html)
