@@ -78,4 +78,4 @@
 # check version
 - name: Check owncloud version
   shell: >
-    sudo echo $(sudo -u apache php occ -V) |sudo tee -a /data/logs/install_version.txt 
+    sudo echo "owncloud version:" $(cat /data/wwwroot/owncloud/version.php |grep OC_VersionString |awk -F"'" '{print $2}') |sudo tee -a /data/logs/install_version.txt 
