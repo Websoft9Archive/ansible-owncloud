@@ -75,3 +75,7 @@
   - name: restart php-fpm
     service: name=php-fpm state=restarted
 
+# check version
+- name: Check owncloud version
+  shell: >
+    sudo echo $(sudo -u apache php occ -V) |sudo tee -a /data/logs/install_version.txt 
