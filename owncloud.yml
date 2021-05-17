@@ -9,7 +9,7 @@
     - name: 'webs_selection'
       prompt: "\nWhich Web-Server do you want to use? [ 1/2 ] \n\n
       1: Apache\n
-      2: Nginx\n"
+      2: Nginx(unreachable)\n"
       private: no
       default: 1
 
