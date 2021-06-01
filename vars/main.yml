@@ -17,7 +17,7 @@ nginx_appname: "owncloud"
 nginx_vhost_mode: "www"
 
 docker_applications: 
-  - onlyofficedocumentserver
+  - onlyofficedocs
   - phpmyadmin
 
 mysql_databases:
