@@ -1,0 +1,4 @@
+#! /bin/bash
+
+cd /data/wwwroot/owncloud
+sudo -u {{owncloud_owner}} /usr/bin/php /data/wwwroot/owncloud/occ "$@"
