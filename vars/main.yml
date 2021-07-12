@@ -32,4 +32,15 @@ init_db:
   mysql:
     admin: root
     users: ["owncloud"]
-    password: "123456"
+    password: "123456" 
+    config_paths:
+      - /data/wwwroot/owncloud/config/config.php
+
+init_application:
+  owncloud:
+    username: admin
+    password: "admin"
+    commands: 
+      - sudo echo -e "$new_password\n$new_password\n" | occ user:resetpassword admin
+      - public_ip=`wget -O - https://download.websoft9.com/ansible/get_ip.sh | bash`
+      - occ config:system:set trusted_domains 1 --value="$public_ip"
