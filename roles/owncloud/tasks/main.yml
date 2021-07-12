@@ -32,6 +32,9 @@
     dest: /usr/local/bin/occ
     mode: u+x,g+x,o+x
 
+- name: Change directory ownership and group ownership
+  shell: chown -R {{owncloud_owner}}:{{owncloud_owner}} /data/wwwroot
+
 - name: Install OwnCloud (Automatically generate configuration files)
   shell: |
     occ maintenance:install \
@@ -73,9 +76,6 @@
 
 # 根据不同的基础环境分别处理
 - block:
-  - name: change owner&group
-    shell: chown -R {{owncloud_owner}}:{{owncloud_owner}} /data/wwwroot
-
   - name: Copy Apache or Nginx vhost configuration
     template: src={{owncloud_vhost_src}} dest={{owncloud_vhost_dir}}
     
