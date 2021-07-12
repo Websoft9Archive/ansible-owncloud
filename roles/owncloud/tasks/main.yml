@@ -27,7 +27,7 @@
   shell: cd /data/wwwroot; if [ ! -d "{{owncloud_name}}" ]; then mv *{{owncloud_name}}* {{owncloud_name}}; fi
 
 - name: Create the occ Helper Script
-  copy:
+  template:
     src: occ
     dest: /usr/local/bin/occ
     mode: u+x,g+x,o+x
