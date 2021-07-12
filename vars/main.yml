@@ -1,6 +1,5 @@
 # Global
 region: "0"
-common_os_support: ["CentOS", "Amazon"]
 
 mysql_remote: True
 mysql_version: "5.7"       
