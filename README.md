@@ -1,62 +1,75 @@
+# ownCloud Cloud Installer
 
-# ownCloud 自动化安装与部署
+![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
-本项目是由 [Websoft9](https://www.websoft9.com) 研发的 [ownCloud](https://owncloud.org/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 ownCloud，让原本复杂的安装过程变得没有任何技术门槛。  
+## Introduction
 
-本项目是开源项目，采用 LGPL3.0 开源协议。
+[English](/README.md) | [简体中文](/README-zh.md)  
 
-## 配置要求
+**ownCloud Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [ownCloud](https://owncloud.org/) based on Ansible and shell. It helps user install ownCloud and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
-安装本项目，确保符合如下的条件：
+## System Requirement
 
-| 条件       | 详情       | 备注  |
-| ------------ | ------------ | ----- |
-| 操作系统       | CentOS7.x       |   |
-| 公有云| AWS, Azure, 阿里云, 华为云, 腾讯云 | 可选 |
-| 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
-| 服务器配置 | 测试环境最低2核4G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
+System Requirement to install this repository are as following：
 
-## 组件
+| Conditions       | Details                               | Notes                |
+| ------------------- | --------------------------------| -------------------- |
+| Operating System   | CentOS7.x, Amazon Linux2 | Optional                 |
+| Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
+| Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
+| Server Configuration | vCPU no less than 2 core, Memory no less than  4 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
 
-包含的核心组件为：ownCloud + Apache/Nginx + MySQL + PHP + ONLYOFFICE Document Server + Docker
+## Ecosystem
 
-更多请见：[参数表](/docs/zh/stack-components.md)
+Core components of this repository: ownCloud + Apache/Nginx + MySQL + PHP + ONLYOFFICE Document Server + Docker
 
-## 本项目安装的是 ownCloud 最新版吗？
+Learn more about [Parameters](/docs/stack-components.md).
 
-本项目通过下载 ownCloud 源码进行安装，下载链接存储在：[role/owncloud/default/main.yml](/roles/owncloud/defaults/main.yml)。下载链接默认总是为最新版链接，我们也会定期检查并测试官方版本的可用性，保证用户可以顺利安装最新版。版本号从ownCloud官方[下载中心](https://owncloud.org/download/)获取
+## Installation
+
+You can install it by thi Cloud Installer solution all in one. In addition, you can deploy image published on major Cloud Platform by Websoft9.
+
+#### All-in-one Installer
+
+Run the automatic installation script with **root** authority to start the installation. If necessary, users need to make interactive choices, and then wait patiently until the installation is successful.
 
 ```
-owncloud_download_url: "https://download.owncloud.org/community/owncloud-latest.zip"
+$ sudo su -
+$ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r owncloud
 ```
 
-## 安装指南
+If the network is broken or blocked, SSH will be interrupted and the installation will fail. Please reinstall.
 
-以 root 用户登录 Linux，运行下面的**一键自动化安装命令**即可启动自动化部署。若没有 root 用户，请以其他用户登录 Linux 后运行 `sudo su -` 命令提升为 root 权限，然后再运行下面的脚本。
+#### Image on Cloud 
 
-```
-wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r owncloud
-```
+Follow our [ownCloud image](https://apps.websoft9.com/owncloud) for installation on major Cloud Platform.
 
-脚本后启动，就开始了自动化安装，必要时需要用户做出交互式选择，然后耐心等待直至安装成功。
+## Documentation
 
-**安装中的注意事项：**  
+**[Administrator Guide](https://support.websoft9.com/docs/owncloud)** 
 
-1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
-2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
+## Changelog
 
-多种原因导致无法顺利安装，请使用我们在公有云上发布的 [ownCloud镜像](https://apps.websoft9.com/owncloud) 的部署方式
-
-
-## 文档
-
-文档链接：https://support.websoft9.com/docs/owncloud/zh
+Detailed changes are documented in the [CHANGELOG](/CHANGELOG.md).
 
 ## License
 
-本项目是开源项目，采用 LGPL3.0 开源协议。补充条款：不允许在公有云的云市场上售卖通过本项目安装后直接或间接制作的镜像。
+[LGPL-3.0](/License.md), Additional Terms: It is not allowed to publish free or paid image based on this repository in any Cloud platform's Marketplace.
+
+Copyright (c) 2016-present, Websoft9
+
+This program provided by Websoft9 contains a series of software with separate copyright notices and license terms. Your use of the source code for the software included is subject to the terms and conditions of its own license.
 
 ## FAQ
 
-- 命令脚本部署与镜像部署有什么区别？请参考：[镜像部署-vs-脚本部署](https://support.websoft9.com/docs/faq/zh/bz-product.html#镜像部署-vs-脚本部署)
-- 本项目支持在 Ansible Tower 上运行吗？支持
+#### Can I run this repository on Ansible Tower? 
+
+Yes.
+
+#### How to install and view the latest release?
+
+Get the ownCloud version from [ownCloud repository](https://owncloud.org/download/), it have installed the latest version by default. 
+
+#### Is the default password safe?
+
+The solution used the random password solution, every deployment produce unique password which is different from other users
