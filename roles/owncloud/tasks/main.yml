@@ -80,7 +80,7 @@
     month: "*"
     weekday: "*"
     user: "{{owncloud_owner}}"
-    job: "/data/wwwroot/owncloud/occ system:cron"
+    job: "occ system:cron"
 
 # 系统通用
 - name: Permission directory
