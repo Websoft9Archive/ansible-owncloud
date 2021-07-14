@@ -7,10 +7,17 @@ owncloud_webs: apache
 owncloud_vhost_dir: /etc/httpd/vhost
 owncloud_vhost_src: vhost.conf
 owncloud_service: httpd
+
+owncloud_db_user: "owncloud"
+owncloud_db_name: "owncloud"
 owncloud_db_password: "123456"
+owncloud_admin_user: "admin"
+owncloud_admin_password: "admin"
+
 owncloud_owner: apache
 owncloud_name: "owncloud"
 owncloud_title: "OwnCloud"
 #下载链接需定期维护
 owncloud_download_url: "https://download.owncloud.org/download/community/owncloud-complete-latest.zip"
+
 
