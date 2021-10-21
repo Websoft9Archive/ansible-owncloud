@@ -18,13 +18,10 @@
   shell: rm -rf /data/wwwroot/*{{owncloud_name}}*
   
 - name: Download OwnCloud
-  unarchive:
-    src: "{{owncloud_download_url}}"
-    dest: /data/wwwroot/
-    remote_src: yes
-
-- name: Rename dir name
-  shell: cd /data/wwwroot; if [ ! -d "{{owncloud_name}}" ]; then mv *{{owncloud_name}}* {{owncloud_name}}; fi
+  shell: |
+    cd /data/wwwroot
+    wget {{owncloud_download_url}} --no-check-certificate
+    unzip owncloud-complete-latest.zip
 
 - name: Create the occ Helper Script
   template:
